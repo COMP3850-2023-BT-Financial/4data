@@ -24,6 +24,7 @@ export default function ComboboxInput() {
   const [selectedSuperFund, setSelectedSuperFund] = useState<SuperFund | null>(
     superFunds[0]
   );
+//Adds the combo box input button. Lists the super funds in a drop down style menu.
 
   const filteredSuperFunds: SuperFund[] =
     query === ""
@@ -31,6 +32,8 @@ export default function ComboboxInput() {
       : superFunds.filter((SuperFund) => {
           return SuperFund.fund.toLowerCase().includes(query.toLowerCase());
         });
+  //Functions as a filter for the Superfund. Under construction**
+
 
   return (
     <Combobox
@@ -105,3 +108,4 @@ export default function ComboboxInput() {
     </Combobox>
   );
 }
+//Styling for the combo box 

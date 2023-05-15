@@ -1,6 +1,8 @@
 import ComboboxInput from "../inputs/comboboxInput";
 import CSVFileUpload from "../CSVFileUpload";
 
+//A form for importing a CSV. Includes a couple inputs neccessary for file upload
+
 export default function AddDataForm() {
   return (
     <form>
@@ -18,6 +20,7 @@ export default function AddDataForm() {
             </label>
             <div className="mt-2 sm:col-span-1 sm:mt-0">
               <ComboboxInput />
+              {/*Editable text box combined with drop down list*/}
             </div>
           </div>
           <div className="mt-10 space-y-8 border-b border-gray-900/10 pb-12 sm:space-y-0 sm:divide-y sm:divide-gray-900/10 sm:border-t sm:pb-0">
@@ -38,8 +41,8 @@ export default function AddDataForm() {
                 />
               </div>
             </div>
-
             <CSVFileUpload />
+            {/*Imported function that reads and writes csv files to the database*/}
           </div>
         </div>
       </div>

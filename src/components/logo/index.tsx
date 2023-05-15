@@ -13,4 +13,5 @@ const BTFinancialLogo = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
+//BT Financial Logo in an SVG. Scalable Logo.
 export default BTFinancialLogo;

@@ -7,6 +7,9 @@ import SuccessfulUploadModal from "../SuccessfulUploadModal";
 import { aggregatedSuperFundHoldingsDataTableHeadings } from "@/lib/consts";
 import { uploadToSupabase } from "@/lib/utils";
 
+/*Allows users to upload CSV or XLSX files, parses them, validates the format, 
+and sends the data to the uploadToSupabase function for further processing */
+
 export type mappedDataStruct = {
   investmentOptionName: string | null;
   assetClass: string | null;
@@ -19,6 +22,8 @@ export type mappedDataStruct = {
   gicsIndustryCodeAndName: string | null;
   gicsSubIndustryCodeAndName: string | null;
 };
+
+//Structure of the CSV upload to be imported into Supabase
 
 const mapParsedDataToJSON = (parsedData: any[]): mappedDataStruct[] => {
   const headers = parsedData[0];
@@ -79,6 +84,8 @@ const mapParsedDataToJSON = (parsedData: any[]): mappedDataStruct[] => {
     return rowObject;
   });
 };
+
+//Maps the csv inputs to the UI's table.
 
 const CSVFileUpload: FC = () => {
   const [successfulUploadModalOpen, setSuccessfulUploadModalOpen] =
@@ -141,6 +148,8 @@ const CSVFileUpload: FC = () => {
     []
   );
 
+  //Validates the File upload. Checks for correct file type and format
+
   return (
     <>
       {successfulUploadModalOpen ? <SuccessfulUploadModal /> : null}
@@ -175,5 +184,7 @@ const CSVFileUpload: FC = () => {
     </>
   );
 };
+
+//Styling for upload view and user functionality
 
 export default CSVFileUpload;

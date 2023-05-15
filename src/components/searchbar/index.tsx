@@ -23,3 +23,4 @@ export default function SearchBar() {
     </div>
   );
 }
+//Styling for the search function/bar. UI Search function

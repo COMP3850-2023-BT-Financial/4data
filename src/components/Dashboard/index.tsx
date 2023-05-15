@@ -44,6 +44,7 @@ const Dashboard: FC<DashboardLayoutProps> = ({ children }) => {
       };
     });
   };
+//Updates the navigation screen depending on the current screen showing.
 
   useEffect(() => {
     updateNavigationCurrent();
@@ -201,5 +202,6 @@ const Dashboard: FC<DashboardLayoutProps> = ({ children }) => {
     </>
   );
 };
+//Styling for the dashboard view + functionality including buttons, navigation, listing.
 
 export default Dashboard;

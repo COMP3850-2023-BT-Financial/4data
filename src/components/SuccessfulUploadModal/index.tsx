@@ -11,7 +11,7 @@ export default function SuccessfulUploadModal() {
   function openModal() {
     setIsOpen(true);
   }
-
+//Controls the popup/dialog box when uploading files.
   return (
     <>
       {/* <div className="fixed inset-0 flex items-center justify-center">
@@ -81,3 +81,4 @@ export default function SuccessfulUploadModal() {
     </>
   );
 }
+//Styling and functionality for the successful upload of the CSV file. UI changes to improve usability. 

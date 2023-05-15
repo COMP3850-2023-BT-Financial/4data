@@ -13,6 +13,8 @@ export type RecentUploadsData = {
 export const RecentUploads = () => {
   const [recentUploads, setRecentUploads] = useState<RecentUploadsData[]>([]);
 
+  //Displays the recent uploads on the dashboard.
+
   const fetchRecentUploads = async () => {
     const { data, error } = await supabase.from("recent_uploads").select("*");
 
@@ -23,6 +25,7 @@ export const RecentUploads = () => {
 
     setRecentUploads(data as RecentUploadsData[]);
   };
+  //Will add the recently added uploads to the dashboard through a fetch request
 
   useEffectOnce(() => {
     fetchRecentUploads();
@@ -119,5 +122,6 @@ export const RecentUploads = () => {
     </div>
   );
 };
+//More styling for the Dashboard/Recent Uploads
 
 export default RecentUploads;
